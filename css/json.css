@@ -1,0 +1,16 @@
+.json-key {
+  font-weight: bold;
+  color: #000;
+}
+
+.json-value {
+  color: #0a1efa;
+}
+
+.json-null-value {
+  color: #fb292e;
+}
+
+.json-string {
+  color: #218535;
+}
