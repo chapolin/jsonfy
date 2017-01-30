@@ -3,6 +3,13 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
     active[tab.id] = false;
     setIcon("inactive");
   }
+  
+  if(changeInfo.status == "complete") {
+    active[tab.id] = true;
+    setIcon("active");
+    
+    chrome.tabs.executeScript(null, {code: "beautifyJson()"});
+  }
 });
 
 chrome.tabs.onActivated.addListener(function(info) {
